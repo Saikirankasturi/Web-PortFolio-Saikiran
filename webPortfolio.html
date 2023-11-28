@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Portfolio Saikiran</title>
+    <link rel="stylesheet" href="css/webPortfolio.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="images/logo.png" alt="main-logo" class="logo" />
+
+      <nav class="navbar">
+        <ul class="navbar-lists">
+          <li>
+            <a href="/webPortfolio.html" class="navbar-link home-link">Home</a>
+          </li>
+          <li>
+            <a href="/about.html" class="navbar-link about-link">About</a>
+          </li>
+          <li>
+            <a href="/projects.html" class="navbar-link project-link"
+              >Projects</a
+            >
+          </li>
+          <!-- <li><a href="#" class="navbar-link service-link">Services</a></li> -->
+          <li>
+            <a href="/contact.html" class="navbar-link contact-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-navbar-btn">
+        <ion-icon name="menu-outline" class="mobile-navbar-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-navbar-icon"></ion-icon>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-main section">
+        <div class="container grid grid-two-column">
+          <div class="section-main-details">
+            <p class="main-top-details">This is me</p>
+            <h1 class="main-heading">Saikiran Kasturi</h1>
+            <p class="main-para">
+              Hi, My name is Saikiran Kasturi and I am a passionate
+              <br /><span id="element"></span>
+            </p>
+            <div>
+              <a href="#" class="btn hireme-btn">Hire Me</a>
+            </div>
+          </div>
+          <!-- Right side section-->
+          <div class="section-main-image">
+            <img src="images/main.png" alt="" class="main-img" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- About section -->
+    <section>
+      <div class="section-about section">
+        <div class="container grid grid-two-column">
+          <div class="about-image">
+            <img
+              class="lazy-img"
+              src="images/about.png"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="about-data">
+            <h2 class="common-head">About</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+              delectus possimus illum! Eaque omnis cum odit distinctio possimus
+              officia ipsum, molestias voluptatibus veniam corporis dicta
+              laboriosam assumenda accusamus aliquam doloremque.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              debitis harum pariatur nisi voluptatum vitae, saepe et quibusdam
+              modi iste necessitatibus quos blanditiis illo ducimus veniam
+              dolorem! Vero, vel provident.
+            </p>
+            <div class="about-data-stats">
+              <div class="about-stats">
+                <h3>HTML</h3>
+                <div class="progress-bar progress-bar-1">
+                  <span>80%</span>
+                </div>
+              </div>
+              <div class="about-stats">
+                <h3>CSS</h3>
+                <div class="progress-bar progress-bar-2">
+                  <span>70%</span>
+                </div>
+              </div>
+              <div class="about-stats">
+                <h3>JAVASCRIPT</h3>
+                <div class="progress-bar progress-bar-3">
+                  <span>50%</span>
+                </div>
+              </div>
+              <div class="about-stats">
+                <h3>SQL</h3>
+                <div class="progress-bar progress-bar-4">
+                  <span>90%</span>
+                </div>
+              </div>
+            </div>
+            <div class="about-data-btn">
+              <a href="#" class="btn">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects section-->
+    <section class="section section-portfolio" id="portfolio-section">
+      <div class="container">
+        <h2 class="common-head">Latest Projects</h2>
+        <h3 > Exam Portal </h3>
+        <p class="" style="max-width: 100%;">
+          I created a user-friendly Exam Portal where
+          students can take quizzes on topics like SQL, Java, Python, and basic
+          queries. I used Spring Boot for the reliable backend and Angular for a
+          cool and easy-to-use interface. It's safe with Spring Security and
+          uses JWT tokens for secure logins. Everything is set up smoothly so
+          students can take exams for free or practice whenever they want.
+        </p>
+      </div>
+
+      <div class="p-btns">
+        <div class="btn p-btn" data-btn-num="1">Websites</div>
+        <div class="btn p-btn" data-btn-num="2">Frontend</div>
+        <div class="btn p-btn" data-btn-num="3">Java</div>
+      </div>
+
+      <div class="container grid grid-three-column portfolio-images">
+        <div class="img-overlay p-btn--1">
+          <img src="images/projects_img/1.jpg" loading="lazy" alt="project_1" />
+          <div class="overlay">
+            <a href="" target="_blank" class="common-head"> Project 1 </a>
+          </div>
+        </div>
+        <div class="img-overlay p-btn--1 p-btn--3">
+          <img src="images/projects_img/1.jpg" loading="lazy" alt="project_2" />
+          <div class="overlay">
+            <a href="" target="_blank" class="common-head"> Project 2 </a>
+          </div>
+        </div>
+        <div class="img-overlay p-btn--2">
+          <img src="images/projects_img/1.jpg" loading="lazy" alt="project_3" />
+          <div class="overlay">
+            <a href="" target="_blank" class="common-head"> Project 3 </a>
+          </div>
+        </div>
+        <div class="img-overlay p-btn--3">
+          <img src="images/projects_img/1.jpg" loading="lazy" alt="project_4" />
+          <div class="overlay">
+            <a href="" target="_blank" class="common-head"> Project 4 </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Freelancing section-->
+    <section class="section section-freelancing">
+      <div class="overlay1"></div>
+      <div class="container">
+        <h2>I am <span>available</span> for freelancing</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+          minima?
+        </p>
+        <a href="/contact.html" class="btn">HIRE ME</a>
+      </div>
+    </section>
+
+    <!-- Contact Us section-->
+    <section class="section section-contact">
+      <div class="container">
+        <h2 class="common-head">Contact Us</h2>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2422.539390168015!2d72.83644715173429!3d19.01058157161222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cee936e31fd9%3A0xaa372ee86439139f!2sNaman%20Midtown!5e0!3m2!1sen!2sin!4v1697450295646!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+      <div class="section-contact-main contact-container">
+        <form action="#">
+          <div class="grid grid-two-column">
+            <div>
+              <label for="username"></label>
+              <input
+                type="text"
+                name="username"
+                placeholder="username"
+                id="username"
+              />
+            </div>
+            <div>
+              <label for="email"></label>
+              <input
+                type="email"
+                name="email"
+                placeholder="name@gmail.com"
+                id="email"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="subject"></label>
+            <input
+              type="text"
+              name="subject"
+              placeholder="subject"
+              id="subject"
+            />
+          </div>
+          <div>
+            <label for="textarea"></label>
+            <textarea
+              name="textarea"
+              id="textarea"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div>
+            <input
+              type="submit"
+              name="submit"
+              id="submit"
+              class="btn"
+              value="Send Message"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section-->
+
+    <footer class="section section-footer footer">
+      <div class="container grid grid-four-column">
+        <div class="f-about">
+          <h3>About</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit
+            ipsam quia ullam officia maiores, odio dolores neque voluptate
+            aliquam!
+          </p>
+        </div>
+        <div class="f-links">
+          <h3>Links</h3>
+          <ul>
+            <li>
+              <span
+                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
+              ><a href="/webPortfolio.html">Home</a>
+            </li>
+            <li>
+              <span
+                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
+              ><a href="/about.html">About Us</a>
+            </li>
+            <li>
+              <span
+                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
+              ><a href="/projects.html">Projects</a>
+            </li>
+            <li>
+              <span
+                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
+              ><a href="/contact.html">Contact Us</a>
+            </li>
+            <!-- <li>
+              <span
+                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
+              ><a href="#">Home</a>
+            </li> -->
+          </ul>
+        </div>
+
+        <div class="f-services">
+          <h3>Services</h3>
+          <ul>
+            <li>
+              <span
+                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
+              ><a href="#">Web design</a>
+            </li>
+            <li>
+              <span
+                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
+              ><a href="#">Web development</a>
+            </li>
+          </ul>
+        </div>
+        <!--end-->
+        <div class="f-address">
+          <h3>Have a Questions?</h3>
+          <address>
+            <ul>
+              <li>
+                <div>
+                  <p>
+                    <span><ion-icon name="location-outline"></ion-icon></span>
+                    <a href="">Mumbai, India</a>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>
+                    <span><ion-icon name="call-outline"></ion-icon></span>
+                    <a href="tel:+919076255234">+91 9076255234</a>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>
+                    <span><ion-icon name="mail-outline"></ion-icon></span>
+                    <a href="mailto:saikiran.kasturi35@gmail.com">
+                      info@saikiran.com
+                    </a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+      <div class="container">
+        <div class="f-social-icons">
+          <a href="https://www.instagram.com/saikiran_kasturi/" target="_blank">
+            <ion-icon name="logo-instagram" class="icons"></ion-icon>
+          </a>
+
+          <a href="https://github.com/Saikirankasturi" target="_blank">
+            <ion-icon name="logo-github" class="icons"></ion-icon>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/saikirankasturi/"
+            target="_blank"
+          >
+            <ion-icon name="logo-linkedin" class="icons"></ion-icon>
+          </a>
+        </div>
+        <div class="f-credits">
+          <p>
+            Copyright @2023 All rights reserved | Saikiran Kasturi |
+            saikiranportfolio.com
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- section scroll up -->
+
+    <!-- <div class="scrollTop-style">
+    <ion-icon name="arrow-up-circle-outline" class="scroll-top"></ion-icon>
+  </div> -->
+
+    <!-- Javascript modules Section-->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", "Fullstack Developer."],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
