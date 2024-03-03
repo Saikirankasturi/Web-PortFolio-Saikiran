@@ -4,8 +4,8 @@ const p_btns = document.querySelector(".p-btns");
 const p_btn = document.querySelector(".p-btn");
 const img_div = document.querySelectorAll(".img-overlay");
 
-const arr=Array.from(p_btn)
-const arr1=Array.from(img_div)
+const arr = Array.from(p_btn);
+const arr1 = Array.from(img_div);
 
 p_btns.addEventListener("click", (num) => {
   const p_btn_clicked = num.target;
@@ -14,15 +14,13 @@ p_btns.addEventListener("click", (num) => {
   p_btn_clicked.classList.contains("p-btn");
   // always remove the classList first then add the class
 
-  console.log(p_btn)
+  console.log(p_btn);
 
-    arr.forEach(
-      (curElem) =>
-       curElem.classList.remove("p-btn-active"));
-//    img_div.forEach((curElem) =>
-//   curElem.classList.remove("portfolio-image-active")
-//   );
-     p_btn_clicked.classList.add("p-btn-active");
+  arr.forEach((curElem) => curElem.classList.remove("p-btn-active"));
+  //    img_div.forEach((curElem) =>
+  //   curElem.classList.remove("portfolio-image-active")
+  //   );
+  p_btn_clicked.classList.add("p-btn-active");
 
   // to find the p-img class number of the images using the btn data attribute number
 
@@ -32,17 +30,12 @@ p_btns.addEventListener("click", (num) => {
   const img_active = document.querySelectorAll(`.p-btn--${btn_num}`);
   // console.log(img_active);
 
-  arr1.forEach((curElem) =>
-  curElem.classList.add("p-image-not-active")
-  );
-
-
+  arr1.forEach((curElem) => curElem.classList.add("p-image-not-active"));
 
   img_active.forEach((curElem) =>
     curElem.classList.remove(`p-image-not-active`)
   );
 });
-
 
 // scroll to top button (we can write in html also but we tried using in Javascript)
 const mainSection = document.querySelector(".section-main");
@@ -55,22 +48,44 @@ scrollElement.innerHTML = `<ion-icon name="arrow-up-circle-outline" class="scrol
 footerElem.after(scrollElement);
 
 const scrollTop = () => {
-    mainSection.scrollIntoView({behavior:"smooth"});
+  mainSection.scrollIntoView({ behavior: "smooth" });
 };
 
+scrollElement.addEventListener("click", scrollTop);
 
-
-scrollElement.addEventListener("click" , scrollTop);
-
-
-// responsive navbar 
+// responsive navbar
 
 const mobile_nav = document.querySelector(".mobile-navbar-btn");
 const headerElem = document.querySelector(".header");
 
-mobile_nav.addEventListener('click',()=>{
+mobile_nav.addEventListener("click", () => {
   headerElem.classList.toggle("active");
 });
 
+//animate number
+
+const counterNum = document.querySelectorAll(".counter-numbers");
+const speed = 1;
+const arr_count = Array.from(counterNum);
+
+arr_count.forEach((curElem) => {
+  const updateNumber = () => {
+    const targetNumber = parseInt(curElem.dataset.number);
+    //console.log(targetNumber);
+
+    const intialNum = parseInt(curElem.innerText);
+    //console.log(intialNum);
+
+    const incrementNumber = Math.trunc(targetNumber / speed)
+    //console.log(incrementNumber)
 
 
+    if(intialNum < targetNumber){
+      curElem.innerText = `${intialNum + incrementNumber}+`;
+
+      setTimeout(updateNumber,1)
+    }
+  };
+
+  updateNumber();
+});
