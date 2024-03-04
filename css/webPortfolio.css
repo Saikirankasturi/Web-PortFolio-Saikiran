@@ -24,6 +24,10 @@
 html {
   font-size: 62.5%;
   /* 1 rem = 10px its a trick*/
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
 }
 
 h1,
@@ -71,10 +75,13 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header .logo {
-  height: 6rem;
+  height: 7rem;
 }
 
 /* .navbar {
@@ -96,12 +103,16 @@ li {
   text-transform: uppercase;
   color: var(--primary-color);
   transition: color 0.5s linear;
+
   /* to make delay */
 }
 
 .navbar-link:hover,
 .navbar-link:active {
   color: var(--secondary-light);
+  text-decoration: underline;
+  transition: all 0.8s linear;
+  transform: translateY(-15%);
 }
 
 .mobile-navbar-btn {
@@ -194,9 +205,6 @@ li {
 }
 
 /* main section */
-.section-main {
-  /*background-color: var(--background-color);*/
-}
 
 .section-main-details {
   display: flex;
@@ -234,9 +242,15 @@ li {
 
 .main-img {
   max-width: 80%;
+  position: relative;
+  top: 2.188rem;
 }
 
 /* About section*/
+
+.content {
+  text-align: justify;
+}
 .about-image {
   display: flex;
   justify-content: center;
@@ -285,13 +299,15 @@ li {
 }
 
 .progress-bar-3::before {
-  width: 50%;
+  width: 75%;
 }
 
 .progress-bar-4::before {
   width: 90%;
 }
-
+.progress-bar-5::before {
+  width: 60%;
+}
 .progress-bar span {
   position: absolute;
   top: 1.8rem;
@@ -316,11 +332,14 @@ li {
 }
 
 .progress-bar-3 span {
-  left: 46%;
+  left: 71%;
 }
 
 .progress-bar-4 span {
   left: 86%;
+}
+.progress-bar-5 span {
+  left: 56%;
 }
 
 /* to create caret */
@@ -355,6 +374,7 @@ li {
 
 .portfolio-images {
   gap: 3.2rem;
+  margin-top: 6.4rem;
 }
 
 .portfolio-images img {
@@ -366,7 +386,7 @@ li {
 
 .img-overlay {
   position: relative;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 .overlay {
@@ -385,7 +405,7 @@ li {
   border-radius: 1rem;
 }
 
-.img-overlay:hover>.overlay {
+.img-overlay:hover > .overlay {
   transform: translateY(0);
   opacity: 0.8;
   cursor: pointer;
@@ -432,14 +452,12 @@ li {
 .section-services p {
   max-width: 60rem;
 }
-.service-box h3{
-  color: #c9c9cc;
+.service-box h3 {
+  color: #ffff;
 }
-
 .section-services .grid {
   margin-top: 10rem;
   row-gap: 10rem;
-  
 }
 
 .service-box {
@@ -447,18 +465,20 @@ li {
   border-radius: 5px;
   padding: 6.4rem 3.4rem;
   transition: all 0.2s linear;
-  background-color: var(--secondary-light);
+  transition-duration: 5s;
+  background-image: linear-gradient(to right, #a8a8a8, #47656f, #365661);
 }
-
-
 .service-box:hover {
-  transform: translateY(-3rem);
+  transform: rotateY(360deg);
+}
+#text {
+  color: white;
 }
 
 .service-icon {
   width: 8rem;
   height: 8rem;
-  background-color: var(--secondary-color);
+  background-color: #8a9da4;
   display: inline-block;
   border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
   padding: 1.4rem 1.8rem;
@@ -499,9 +519,6 @@ li {
   margin-bottom: 1rem;
 }
 
-
-
-
 /* Freelancing Section */
 .section-freelancing {
   background-image: url("../images/projects_img/1.jpg");
@@ -512,7 +529,6 @@ li {
   transition: all 0.7s linear;
   text-align: center;
 }
-
 
 .section-freelancing .overlay1 {
   position: absolute;
@@ -574,6 +590,11 @@ li {
 
 .section-contact-main .grid {
   gap: 3.2rem;
+}
+
+.section-contact-main input[type="submit"] {
+  max-width: 30%;
+  border: none;
 }
 
 /* Footer Section */
@@ -684,8 +705,34 @@ footer a:active {
 }
 
 /* media-queries*/
+/* 1500px */
+@media (max-width: 95em) {
+  .container {
+    max-width: 130rem;
+    padding: 0 3.2rem;
+  }
+  .navbar-lists {
+    gap: 3.2rem;
+  }
+}
+/* 1200 */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .container {
+    max-width: 110rem;
+  }
 
+  .grid {
+    gap: 4.8rem;
+  }
+}
+/* 980 */
 @media (max-width: 980px) {
+  html {
+    font-size: 50%;
+  }
   .header {
     position: relative;
   }
@@ -713,10 +760,8 @@ footer a:active {
     display: flex;
     justify-content: center;
     align-items: center;
-
     transform: translateX(100%);
     transition: all 0.5s linear;
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -730,15 +775,16 @@ footer a:active {
 
   .navbar .navbar-lists .navbar-link:link,
   .navbar .navbar-lists .navbar-link:visited {
-    color: #113946;
+    color: #ffff;
     font-size: 3.2rem;
   }
 
   .active .navbar {
-    transform: translateX(0%);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transform: translateX(0);
+    z-index: 9999;
   }
 
   .active .mobile-navbar-btn .mobile-navbar-icon[name="menu-outline"] {
@@ -747,5 +793,97 @@ footer a:active {
 
   .active .mobile-navbar-btn .mobile-navbar-icon[name="close-outline"] {
     display: block;
+  }
+  .section-main h1 {
+    line-height: 1.05;
+  }
+  .section-services .grid {
+    gap: 6rem;
+  }
+  .section-services .grid-two-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 780 */
+@media (max-width: 48.5em) {
+  .container {
+    max-width: 71rem;
+  }
+  .section-main .grid-two-column {
+    grid-template-columns: 1fr;
+  }
+  .section-main-details {
+    align-items: center;
+  }
+  .main-para {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .section-main img {
+    width: 70%;
+  }
+  .section-about .grid-two-column {
+    grid-template-columns: 1fr;
+  }
+  .section-about .about-image {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* grid:2/3; */
+    margin-top: 3.2rem;
+  }
+  .section-about .about-image img {
+    width: 65%;
+  }
+  /* portfolio */
+
+  .section-portfolio .grid-three-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* footer */
+  .section-footer .grid-four-column {
+    grid-template-columns: 1fr 1fr;
+    /* margin-right: 5rem; */
+  }
+}
+
+/* below 560 */
+@media (max-width: 35em) {
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .header .logo {
+    width: 50%;
+  }
+
+  .p-btns {
+    gap: 2.8rem;
+  }
+  .btn {
+    padding: 1rem 2rem;
+  }
+  .section-services .grid-two-column {
+    grid-template-columns: 1fr;
+  }
+  .section-freelancing h2 {
+    font-size: 3.2rem;
+  }
+
+  .contact-container {
+    padding: 0 3.2rem;
+  }
+
+  .contact-container .grid-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .section-contact-main input[type="submit"] {
+    max-width: 40%;
+  }
+
+  .section-footer .f-about,
+  .section-footer .f-address {
+    grid-column: 1/-1;
   }
 }

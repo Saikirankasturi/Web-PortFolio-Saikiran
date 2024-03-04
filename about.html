@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Page</title>
     <link rel="stylesheet" href="css/webPortfolio.css" />
+    <link rel="icon" href="/images/favicon.ico" />
     <script defer src="script.js"></script>
   </head>
   <body>
     <header class="header">
       <img src="images/logo.png" alt="main-logo" class="logo" />
-
       <nav class="navbar">
         <ul class="navbar-lists">
           <li><a href="/index.html" class="navbar-link home-link">Home</a></li>
@@ -22,7 +22,11 @@
               >Projects</a
             >
           </li>
-          <!-- <li><a href="#" class="navbar-link service-link">Services</a></li> -->
+          <li>
+            <a href="/services.html" class="navbar-link service-link"
+              >Services</a
+            >
+          </li>
           <li>
             <a href="/contact.html" class="navbar-link contact-link">Contact</a>
           </li>
@@ -34,32 +38,30 @@
       <div class="section-about section">
         <div class="container grid grid-two-column">
           <div class="about-image">
-            <img src="images/about.png" alt="" />
+            <img class="lazy-img" src="images/about.png" alt="" loading="lazy" />
           </div>
           <div class="about-data">
             <h2 class="common-head">About</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
-              delectus possimus illum! Eaque omnis cum odit distinctio possimus
-              officia ipsum, molestias voluptatibus veniam corporis dicta
-              laboriosam assumenda accusamus aliquam doloremque.
-            </p>
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              debitis harum pariatur nisi voluptatum vitae, saepe et quibusdam
-              modi iste necessitatibus quos blanditiis illo ducimus veniam
-              dolorem! Vero, vel provident.
+            <p class="content">
+              I am Saikiran Kasturi, a graduate of Shah and Anchor Kutchhi
+              Engineering College with a focus on Electronics and
+              Telecommunications Engineering. I possess a strong affinity for
+              applying technology to problem-solving and innovation. Proficient
+              in HTML, CSS, JavaScript, SQL, Angular, Python, and Django, I
+              specialize in web development, crafting visually pleasing and
+              functional websites. Continuously expanding my knowledge base, I
+              remain familiar of the latest technological advancements to enhance
+              my skills and contribute effectively to projects.
             </p>
             <div class="about-data-stats">
               <div class="about-stats">
-                <h3>HTML</h3>
+                <h3>PYTHON</h3>
                 <div class="progress-bar progress-bar-1">
                   <span>80%</span>
                 </div>
               </div>
               <div class="about-stats">
-                <h3>CSS</h3>
+                <h3>DJANGO</h3>
                 <div class="progress-bar progress-bar-2">
                   <span>70%</span>
                 </div>
@@ -67,13 +69,19 @@
               <div class="about-stats">
                 <h3>JAVASCRIPT</h3>
                 <div class="progress-bar progress-bar-3">
-                  <span>50%</span>
+                  <span>75%</span>
                 </div>
               </div>
               <div class="about-stats">
                 <h3>SQL</h3>
                 <div class="progress-bar progress-bar-4">
                   <span>90%</span>
+                </div>
+              </div>
+              <div class="about-stats">
+                <h3>ANGULAR</h3>
+                <div class="progress-bar progress-bar-5">
+                  <span>60%</span>
                 </div>
               </div>
             </div>
@@ -90,54 +98,43 @@
         <div class="f-about">
           <h3>About</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit
-            ipsam quia ullam officia maiores, odio dolores neque voluptate
-            aliquam!
+            I am Saikiran Kasturi, a graduate of Shah and Anchor Kutchhi
+            Engineering College with a focus on Electronics and
+            Telecommunications Engineering.Proficient in HTML, CSS, JavaScript, SQL, 
+            Angular, Python, and Django.
+            
           </p>
         </div>
         <div class="f-links">
           <h3>Links</h3>
           <ul>
             <li>
-              <span
-                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
-              ><a href="#">Home</a>
+              <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/webPortfolio.html">Home</a>
             </li>
             <li>
-              <span
-                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
-              ><a href="#">Home</a>
+              <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/about.html">About Us</a>
             </li>
             <li>
-              <span
-                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
-              ><a href="#">Home</a>
+              <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/projects.html">Projects</a>
             </li>
             <li>
-              <span
-                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
-              ><a href="#">Home</a>
+              <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/services.html">Services</a>
             </li>
             <li>
-              <span
-                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
-              ><a href="#">Home</a>
+              <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/contact.html">Contact Us</a>
             </li>
+            
           </ul>
         </div>
-
+  
         <div class="f-services">
           <h3>Services</h3>
           <ul>
             <li>
-              <span
-                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
-              ><a href="#">Web design</a>
+              <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/services.html">Web design</a>
             </li>
             <li>
-              <span
-                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
-              ><a href="#">Web development</a>
+              <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/services.html">Web development</a>
             </li>
           </ul>
         </div>
@@ -181,21 +178,18 @@
           <a href="https://www.instagram.com/saikiran_kasturi/" target="_blank">
             <ion-icon name="logo-instagram" class="icons"></ion-icon>
           </a>
-
+  
           <a href="https://github.com/Saikirankasturi" target="_blank">
             <ion-icon name="logo-github" class="icons"></ion-icon>
           </a>
-
-          <a
-            href="https://www.linkedin.com/in/saikirankasturi/"
-            target="_blank"
-          >
+  
+          <a href="https://www.linkedin.com/in/saikirankasturi/" target="_blank">
             <ion-icon name="logo-linkedin" class="icons"></ion-icon>
           </a>
         </div>
         <div class="f-credits">
           <p>
-            Copyright @2023 All rights reserved | Saikiran Kasturi |
+            Saikiran Kasturi |
             saikiranportfolio.com
           </p>
         </div>

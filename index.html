@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web Portfolio Saikiran</title>
   <link rel="stylesheet" href="css/webPortfolio.css" />
+  <link rel="icon" href="/images/favicon.ico">
   <script defer src="script.js"></script>
 </head>
 
@@ -25,7 +26,7 @@
           <a href="/projects.html" class="navbar-link project-link">Projects</a>
         </li>
         <li>
-          <a href="#" class="navbar-link service-link">Services</a>
+          <a href="/services.html" class="navbar-link service-link">Services</a>
         </li>
         <li>
           <a href="/contact.html" class="navbar-link contact-link">Contact</a>
@@ -49,7 +50,7 @@
             <br /><span id="element"></span>
           </p>
           <div>
-            <a href="#" class="btn hireme-btn">Hire Me</a>
+            <a href="/contact.html" class="btn hireme-btn">Hire Me</a>
           </div>
         </div>
         <!-- Right side section-->
@@ -69,28 +70,26 @@
         </div>
         <div class="about-data">
           <h2 class="common-head">About</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
-            delectus possimus illum! Eaque omnis cum odit distinctio possimus
-            officia ipsum, molestias voluptatibus veniam corporis dicta
-            laboriosam assumenda accusamus aliquam doloremque.
-          </p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            debitis harum pariatur nisi voluptatum vitae, saepe et quibusdam
-            modi iste necessitatibus quos blanditiis illo ducimus veniam
-            dolorem! Vero, vel provident.
+          <p class="content">
+            I am Saikiran Kasturi, a graduate of Shah and Anchor Kutchhi
+            Engineering College with a focus on Electronics and
+            Telecommunications Engineering. I possess a strong affinity for
+            applying technology to problem-solving and innovation. Proficient
+            in HTML, CSS, JavaScript, SQL, Angular, Python, and Django, I
+            specialize in web development, crafting visually pleasing and
+            functional websites. Continuously expanding my knowledge base, I
+            remain familiar of the latest technological advancements to enhance
+            my skills and contribute effectively to projects.
           </p>
           <div class="about-data-stats">
             <div class="about-stats">
-              <h3>HTML</h3>
+              <h3>PYTHON</h3>
               <div class="progress-bar progress-bar-1">
                 <span>80%</span>
               </div>
             </div>
             <div class="about-stats">
-              <h3>CSS</h3>
+              <h3>DJANGO</h3>
               <div class="progress-bar progress-bar-2">
                 <span>70%</span>
               </div>
@@ -98,13 +97,19 @@
             <div class="about-stats">
               <h3>JAVASCRIPT</h3>
               <div class="progress-bar progress-bar-3">
-                <span>50%</span>
+                <span>75%</span>
               </div>
             </div>
             <div class="about-stats">
               <h3>SQL</h3>
               <div class="progress-bar progress-bar-4">
                 <span>90%</span>
+              </div>
+            </div>
+            <div class="about-stats">
+              <h3>ANGULAR</h3>
+              <div class="progress-bar progress-bar-5">
+                <span>60%</span>
               </div>
             </div>
           </div>
@@ -120,15 +125,6 @@
   <section class="section section-portfolio" id="portfolio-section">
     <div class="container">
       <h2 class="common-head">Latest Projects</h2>
-      <h3> Exam Portal </h3>
-      <p class="" style="max-width: 100%;">
-        I created a user-friendly Exam Portal where
-        students can take quizzes on topics like SQL, Java, Python, and basic
-        queries. I used Spring Boot for the reliable backend and Angular for a
-        cool and easy-to-use interface. It's safe with Spring Security and
-        uses JWT tokens for secure logins. Everything is set up smoothly so
-        students can take exams for free or practice whenever they want.
-      </p>
     </div>
 
     <div class="p-btns">
@@ -139,25 +135,25 @@
 
     <div class="container grid grid-three-column portfolio-images">
       <div class="img-overlay p-btn--1">
-        <img src="images/projects_img/1.jpg" loading="lazy" alt="project_1" />
+        <img src="images/projects_img/project_1.png" loading="lazy" alt="project_1" />
         <div class="overlay">
           <a href="" target="_blank" class="common-head"> Project 1 </a>
         </div>
       </div>
-      <div class="img-overlay p-btn--1 p-btn--3">
-        <img src="images/projects_img/1.jpg" loading="lazy" alt="project_2" />
+      <div class="img-overlay p-btn--3">
+        <img src="images/projects_img/project_2.png" loading="lazy" alt="project_2" />
         <div class="overlay">
           <a href="" target="_blank" class="common-head"> Project 2 </a>
         </div>
       </div>
       <div class="img-overlay p-btn--2">
-        <img src="images/projects_img/1.jpg" loading="lazy" alt="project_3" />
+        <img src="images/projects_img/project_3.png" loading="lazy" alt="project_3" />
         <div class="overlay">
           <a href="" target="_blank" class="common-head"> Project 3 </a>
         </div>
       </div>
       <div class="img-overlay p-btn--3">
-        <img src="images/projects_img/1.jpg" loading="lazy" alt="project_4" />
+        <img src="images/projects_img/coming-soon.png" loading="lazy" alt="project_4" />
         <div class="overlay">
           <a href="" target="_blank" class="common-head"> Project 4 </a>
         </div>
@@ -189,65 +185,30 @@
   <section class="section section-services">
     <div class="container">
       <h2 class="common-head">Service Offers</h2>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem ex
-        dolores tempore possimus, mollitia vero quas
-      </p>
     </div>
 
-    <div class="container grid grid-three-column">
+    <div class="container grid grid-two-column">
       <div class="service-box">
         <ion-icon class="service-icon" name="desktop-outline"></ion-icon>
         <h3>web Design</h3>
-        <p>
-          “It is not because things are difficult that we do not dare; it is
-          because we do not dare that they are difficult.”
+        <p id="text">
+          “Elevate your online presence with our bespoke web design solutions. 
+          We combine creativity and strategic thinking to craft visually stunning interfaces that 
+          resonate with users and reflect your brand identity.”
         </p>
       </div>
 
       <div class="service-box">
-        <ion-icon name="logo-react" class="service-icon"></ion-icon>
+        <ion-icon class="service-icon" name="desktop-outline"></ion-icon>
         <h3>web development</h3>
-        <p>
-          “It is not because things are difficult that we do not dare; it is
-          because we do not dare that they are difficult.”
+        <p id="text">
+          “I specialize in web development services. I create custom solutions that fit 
+          your needs. I make sure the websites. I build are easy to use and secure. From
+          making them look good on all devices to adding cool features,I've got it covered.
+          Let's work together to bring your ideas to life and make your
+          online presence awesome!”
         </p>
       </div>
-
-      <div class="service-box">
-        <ion-icon class="service-icon" name="desktop-outline"></ion-icon>
-        <h3>photography</h3>
-        <p>
-          “It is not because things are difficult that we do not dare; it is
-          because we do not dare that they are difficult.”
-        </p>
-      </div>
-
-      <div class="service-box">
-        <ion-icon class="service-icon" name="desktop-outline"></ion-icon>
-        <h3>clipping path</h3>
-        <p>
-          “It is not because things are difficult that we do not dare; it is
-          because we do not dare that they are difficult.”
-        </p>
-      </div>
-      <div class="service-box">
-        <ion-icon class="service-icon" name="desktop-outline"></ion-icon>
-        <h3>apps interface</h3>
-        <p>
-          “It is not because things are difficult that we do not dare; it is
-          because we do not dare that they are difficult.”
-        </p>
-      </div>
-      <div class="service-box">
-        <ion-icon class="service-icon" name="desktop-outline"></ion-icon>
-        <h3>graphic design</h3>
-        <p>
-          “It is not because things are difficult that we do not dare; it is
-          because we do not dare that they are difficult.”
-        </p>
-      </div>
-    </div>
   </section>
 
   <!-- Freelancing section-->
@@ -256,8 +217,9 @@
     <div class="container">
       <h2>I am <span>available</span> for freelancing</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-        minima?
+        “I am available for freelancing projects, ready to bring your ideas to life with creativity and dedication. With flexible hours and a passion for quality work, 
+        I offer expertise in Web development to meet your project needs efficiently and effectively. 
+        Let's collaborate to turn your vision into reality!”
       </p>
       <a href="/contact.html" class="btn">HIRE ME</a>
     </div>
@@ -274,25 +236,24 @@
       referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <div class="section-contact-main contact-container">
-      <form action="#">
+      <form action="https://formspree.io/f/mqkrbrjy" method="POST">
         <div class="grid grid-two-column">
           <div>
             <label for="username"></label>
-            <input type="text" name="username" placeholder="username" id="username" />
+            <input type="text" name="username" autocomplete="off" placeholder="Name" id="username" required />
           </div>
           <div>
             <label for="email"></label>
-            <input type="email" name="email" placeholder="name@gmail.com" id="email" />
+            <input type="email" name="email" placeholder="Email" id="email" autocomplete="off" required />
           </div>
         </div>
-
         <div>
           <label for="subject"></label>
-          <input type="text" name="subject" placeholder="subject" id="subject" />
+          <input type="text" name="subject" autocomplete="off" minlength="10" placeholder="Subject" id="subject" required />
         </div>
         <div>
           <label for="textarea"></label>
-          <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+          <textarea placeholder="Message" name="textarea" minlength="10" autocomplete="off" id="textarea" cols="30" rows="10" required></textarea>
         </div>
         <div>
           <input type="submit" name="submit" id="submit" class="btn" value="Send Message" />
@@ -308,9 +269,11 @@
       <div class="f-about">
         <h3>About</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit
-          ipsam quia ullam officia maiores, odio dolores neque voluptate
-          aliquam!
+          I am Saikiran Kasturi, a graduate of Shah and Anchor Kutchhi
+          Engineering College with a focus on Electronics and
+          Telecommunications Engineering.Proficient in HTML, CSS, JavaScript, SQL, 
+          Angular, Python, and Django.
+          
         </p>
       </div>
       <div class="f-links">
@@ -326,13 +289,12 @@
             <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/projects.html">Projects</a>
           </li>
           <li>
+            <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/services.html">Services</a>
+          </li>
+          <li>
             <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/contact.html">Contact Us</a>
           </li>
-          <!-- <li>
-              <span
-                ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
-              ><a href="#">Home</a>
-            </li> -->
+          
         </ul>
       </div>
 
@@ -340,10 +302,10 @@
         <h3>Services</h3>
         <ul>
           <li>
-            <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="#">Web design</a>
+            <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/services.html">Web design</a>
           </li>
           <li>
-            <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="#">Web development</a>
+            <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span><a href="/services.html">Web development</a>
           </li>
         </ul>
       </div>
@@ -398,7 +360,7 @@
       </div>
       <div class="f-credits">
         <p>
-          Copyright @2023 All rights reserved | Saikiran Kasturi |
+          Saikiran Kasturi |
           saikiranportfolio.com
         </p>
       </div>
