@@ -867,7 +867,7 @@ footer a:active {
     grid-template-columns: 1fr;
   }
   .section-freelancing h2 {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 
   .contact-container {
@@ -879,7 +879,7 @@ footer a:active {
   }
 
   .section-contact-main input[type="submit"] {
-    max-width: 40%;
+    max-width: 49%;
   }
 
   .section-footer .f-about,
