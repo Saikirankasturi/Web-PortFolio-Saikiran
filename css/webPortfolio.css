@@ -810,6 +810,10 @@ footer a:active {
   .container {
     max-width: 71rem;
   }
+  .section-main h1{
+    text-align: center;
+  }
+
   .section-main .grid-two-column {
     grid-template-columns: 1fr;
   }
